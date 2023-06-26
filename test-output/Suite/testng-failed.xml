@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.gsg.utility.ListenerClass"/>
+  </listeners>
+  <test thread-count="5" name="Test_All(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="com.gsg.testcases.TelevisionPageTest">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="TelevisionPageTest"/>
+          <include name="tearDown"/>
+          <include name="loadConfig"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.gsg.testcases.TelevisionPageTest -->
+      <class name="com.gsg.testcases.HomePageTest">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="setup"/>
+          <include name="homePageTest"/>
+          <include name="tearDown"/>
+          <include name="loadConfig"/>
+        </methods>
+      </class> <!-- com.gsg.testcases.HomePageTest -->
+    </classes>
+  </test> <!-- Test_All(failed) -->
+</suite> <!-- Failed suite [Suite] -->
